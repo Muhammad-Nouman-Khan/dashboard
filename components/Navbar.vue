@@ -1,7 +1,12 @@
 <template>
   <nav class="w-full flex justify-between items-center p-4">
     <div class="flex items-center gap-4">
-      <Icon name="lucide:menu" size="25" />
+      <Icon
+        name="lucide:menu"
+        size="25"
+        class="cursor-pointer"
+        @click="$emit('toggleSidebar')"
+      />
       <h1 class="italic text-2xl font-bold">Bookme</h1>
     </div>
 

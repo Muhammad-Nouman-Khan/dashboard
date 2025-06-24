@@ -1,6 +1,14 @@
 <script setup lang="ts">
 import { useRoute } from "vue-router";
 import { navLinks, type NavItem } from "@/data/data";
+import { defineProps } from "vue";
+
+const props = defineProps({
+  visible: {
+    type: Boolean,
+    default: true,
+  },
+});
 
 const route = useRoute();
 
@@ -43,7 +51,13 @@ const isActive = (item: NavItem): boolean => {
 </script>
 
 <template>
-  <div class="p-4 w-64 bg-white text-sm">
+  <div
+    :class="[
+      'p-4 w-64 min-h-screen bg-white text-sm z-40 ',
+      props.visible ? 'block' : 'hidden',
+      'lg:block',
+    ]"
+  >
     <!-- Links container -->
     <div class="flex flex-col gap-2 cursor-pointer border-b border-gray-300">
       <NuxtLink
