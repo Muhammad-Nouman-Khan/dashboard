@@ -3,22 +3,25 @@
     class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-6"
   >
     <div>
-      <h2 class="text-3xl font-bold">Good Morning, {{ username }}</h2>
-      <p class="text-gray-500 mt-1">{{ today }}</p>
+      <h2 class="text-3xl font-bold text-[#3C3C3C]">
+        Good Morning, {{ username }}
+      </h2>
+      <p class="text-[#808080] mt-1">{{ today }}</p>
     </div>
     <div class="relative">
       <button
-        class="flex items-center gap-2 border border-blue-400 text-blue-600 px-4 py-2 rounded-lg bg-white cursor-pointer hover:bg-blue-50 transition w-fit"
+        class="flex items-center gap-2 border border-[#346CC4] text-[#346CC4] px-4 py-2 rounded-lg bg-white cursor-pointer hover:bg-[#F6F9FD] transition w-fit"
         @click="showDropdown = !showDropdown"
       >
         <Icon name="lucide:calendar" />
-        <span>This Week</span>
+        <span class="text-[#346CC4]">This Week</span>
+        <Icon name="lucide:chevron-down" size="16" />
       </button>
       <div
         v-if="showDropdown"
         class="absolute right-0 mt-2 bg-white border rounded shadow p-4 z-10 min-w-[180px]"
       >
-        <p class="text-gray-700 text-sm">
+        <p class="text-[#3C3C3C] text-sm">
           Showing stats for <span class="font-semibold">this week</span>.
         </p>
       </div>

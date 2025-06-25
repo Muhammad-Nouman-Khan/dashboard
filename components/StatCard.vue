@@ -1,7 +1,11 @@
 <template>
-  <div :class="['bg-white flex justify-between rounded-lg p-4', borderClass]">
+  <div
+    :class="[
+      'bg-white flex justify-between rounded-lg p-4 border-l-5 border-l-[#346CC4]',
+    ]"
+  >
     <div class="flex-1">
-      <p class="text-gray-500">{{ title }}</p>
+      <p class="text-[#808080]">{{ title }}</p>
       <div class="flex gap-2 items-center">
         <h1 class="text-3xl lg:text-2xl font-bold">{{ value }}</h1>
         <div
@@ -19,7 +23,7 @@
     </div>
     <div class="flex items-center justify-center cursor-pointer">
       <div
-        class="bg-blue-100 rounded-full p-3 flex items-center justify-center"
+        class="bg-[#F6F9FD] rounded-full p-3 flex items-center justify-center"
       >
         <Icon :name="icon" :style="{ color: iconColor }" size="24" />
       </div>
@@ -35,14 +39,12 @@ const props = defineProps({
   value: [String, Number],
   icon: String,
   iconColor: String,
-  borderColor: String,
   trend: String,
   trendIcon: String,
   trendColor: String,
   trendBg: String,
 });
-const borderClass = computed(() => `border-l-5 border-l-${props.borderColor}`);
 const trendBgClass = computed(() =>
-  props.trendBg ? `bg-${props.trendBg} rounded-lg` : ""
+  props.trendBg ? `${props.trendBg} rounded-lg` : ""
 );
 </script>

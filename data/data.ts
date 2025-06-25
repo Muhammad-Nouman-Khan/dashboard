@@ -31,49 +31,49 @@ export const chartData: ChartData[] = [
   {
     title: "Flights",
     icon: "lucide:plane",
-    iconColor: "orange",
+    iconColor: "#FAA565",
     money: 4000,
     progress: 50,
   },
   {
     title: "Bus",
     icon: "lucide:bus",
-    iconColor: "green",
+    iconColor: "#26B24D",
     money: 4000,
     progress: 50,
   },
   {
     title: "Car Rent",
     icon: "lucide:car",
-    iconColor: "blue",
+    iconColor: "#6366F1",
     money: 4000,
     progress: 50,
   },
   {
     title: "Hotels",
     icon: "lucide:hotel",
-    iconColor: "orange",
+    iconColor: "#FACC15",
     money: 4000,
     progress: 50,
   },
   {
     title: "Train",
     icon: "lucide:train",
-    iconColor: "blue",
+    iconColor: "#4F74F3",
     money: 4000,
     progress: 50,
   },
   {
     title: "Events",
-    icon: "lucide:calendar",
-    iconColor: "red",
+    icon: "lucide:mic-vocal",
+    iconColor: "#EC4899",
     money: 4000,
     progress: 50,
   },
   {
     title: "Tours",
-    icon: "lucide:package",
-    iconColor: "purple",
+    icon: "lucide:tree-palm",
+    iconColor: "#9747FF",
     money: 4000,
     progress: 50,
   },
@@ -84,7 +84,6 @@ export interface StatCardData {
   value: number | string;
   icon: string;
   iconColor: string;
-  borderColor: string;
   trend: string;
   trendIcon: string;
   trendColor: string;
@@ -96,34 +95,31 @@ export const statCards: StatCardData[] = [
     title: "Total Bookings",
     value: 512,
     icon: "lucide:calendar",
-    iconColor: "#007bff",
-    borderColor: "blue-600",
+    iconColor: "#346CC4",
     trend: "11.09%",
     trendIcon: "lucide:arrow-down",
     trendColor: "text-red-600",
-    trendBg: "red-200",
+    trendBg: "bg-[#FFFBFB]",
   },
   {
     title: "Total Savings",
     value: 45666,
     icon: "lucide:book",
-    iconColor: "#007bff",
-    borderColor: "blue-600",
+    iconColor: "#346CC4",
     trend: "11.09%",
     trendIcon: "lucide:arrow-up",
-    trendColor: "text-green-600",
-    trendBg: "green-200",
+    trendColor: "text-[#2F9461]",
+    trendBg: "bg-[#EBF5F0]",
   },
   {
     title: "Total Expense",
     value: 512,
     icon: "lucide:calendar-check",
-    iconColor: "#007bff",
-    borderColor: "blue-600",
+    iconColor: "#346CC4",
     trend: "11.09%",
     trendIcon: "lucide:arrow-down",
-    trendColor: "text-red-600",
-    trendBg: "red-200",
+    trendColor: "text-[#F34141]",
+    trendBg: "bg-[#FFFBFB]",
   },
 ];
 
@@ -154,7 +150,7 @@ export const bookings: Booking[] = [
     debit: 2000,
     credit: 0,
     total: 2000,
-    status: "Paid",
+    status: "Unpaid",
   },
   {
     orderId: "EVT 11234126",
@@ -163,7 +159,7 @@ export const bookings: Booking[] = [
     debit: 0,
     credit: 1500,
     total: 1500,
-    status: "Pending",
+    status: "Unpaid",
   },
   {
     orderId: "EVT 11234127",
@@ -181,7 +177,7 @@ export const bookings: Booking[] = [
     debit: 0,
     credit: 800,
     total: 800,
-    status: "Unpaid",
+    status: "Paid",
   },
   {
     orderId: "EVT 11234129",
@@ -190,7 +186,7 @@ export const bookings: Booking[] = [
     debit: 1200,
     credit: 0,
     total: 1200,
-    status: "Pending",
+    status: "Paid",
   },
   {
     orderId: "EVT 11234130",
@@ -199,7 +195,7 @@ export const bookings: Booking[] = [
     debit: 0,
     credit: 900,
     total: 900,
-    status: "Paid",
+    status: "Pending",
   },
   {
     orderId: "EVT 11234131",
@@ -208,7 +204,7 @@ export const bookings: Booking[] = [
     debit: 700,
     credit: 0,
     total: 700,
-    status: "Unpaid",
+    status: "Pending",
   },
   {
     orderId: "EVT 11234132",
@@ -226,7 +222,7 @@ export const bookings: Booking[] = [
     debit: 600,
     credit: 0,
     total: 600,
-    status: "Paid",
+    status: "Pending",
   },
 ];
 

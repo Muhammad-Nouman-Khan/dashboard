@@ -1,14 +1,12 @@
 <template>
   <div>
-    <Navbar @toggleSidebar="sidebarOpen = !sidebarOpen" />
     <div class="flex">
-      <Sidebar :visible="sidebarOpen" />
-      <main class="flex-1 min-h-screen bg-blue-100">
+      <main class="flex-1">
         <!-- Dashboard Header -->
-        <div class="p-4">
+        <div>
           <GreetingHeader :username="username" />
           <!-- Card Row -->
-          <div class="grid grid-cols-1 lg:grid-cols-3 lg:gap-2 gap-6">
+          <div class="grid grid-cols-1 lg:grid-cols-3 lg:gap-2 gap-3">
             <StatCard
               v-for="card in statCards"
               :key="card.title"
@@ -16,7 +14,7 @@
             />
           </div>
         </div>
-        <div class="px-4 flex flex-col gap-6 md:flex-row w-full">
+        <div class="flex flex-col gap-6 md:flex-row w-full mt-5">
           <!-- <Chart class="flex-1" /> -->
           <TotalBookingsCard
             class="flex-1"
@@ -29,8 +27,8 @@
             :chartData="chartData"
           />
         </div>
-        <div class="p-4">
-          <h1 class="text-2xl font-bold">Recent Bookings</h1>
+        <div class="mt-5">
+          <h1 class="text-2xl font-semibold">Recent Bookings</h1>
           <!-- Container -->
           <RecentBookings />
         </div>
@@ -40,7 +38,6 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
 import { chartData } from "~/data/data";
 import Chart from "~/components/Chart.vue";
 import StatCard from "~/components/StatCard.vue";
@@ -48,5 +45,4 @@ import { statCards } from "~/data/data";
 import TotalBookingsCard from "~/components/TotalBookingsCard.vue";
 import GreetingHeader from "~/components/GreetingHeader.vue";
 import { username } from "~/data/data";
-const sidebarOpen = ref(false);
 </script>

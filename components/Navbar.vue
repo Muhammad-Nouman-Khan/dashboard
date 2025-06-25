@@ -1,24 +1,46 @@
+<script setup>
+import { ref, onMounted, onBeforeUnmount } from "vue";
+
+const openDropdown = ref(null);
+
+function toggleDropdown(type) {
+  openDropdown.value = openDropdown.value === type ? null : type;
+}
+
+function handleClickOutside(event) {
+  if (!event.target.closest(".navbar-dropdown")) {
+    openDropdown.value = null;
+  }
+}
+
+onMounted(() => {
+  document.addEventListener("click", handleClickOutside);
+});
+onBeforeUnmount(() => {
+  document.removeEventListener("click", handleClickOutside);
+});
+</script>
+
 <template>
   <nav
-    class="w-full flex justify-between items-center p-4 sticky top-0 z-50 bg-white shadow-md"
+    class="w-full flex justify-between items-center bg-white shadow-sm pt-[15px] pb-[15px] pl-[20px] pr-[20px] fixed top-0 left-0 z-50"
   >
-    <div class="flex items-center gap-4">
+    <div class="flex items-center gap-[10px]">
       <Icon
         name="lucide:menu"
         size="25"
-        class="cursor-pointer"
         @click="$emit('toggleSidebar')"
+        class="cursor-pointer"
       />
-      <h1 class="italic text-2xl font-bold">bookme</h1>
+      <NuxtLink to="/" class="italic text-2xl font-bold">bookme</NuxtLink>
     </div>
-
-    <div class="flex items-center gap-4">
-      <div class="relative">
+    <div class="flex items-center gap-2">
+      <div class="relative navbar-dropdown">
         <div
-          class="rounded-full bg-[#F6F9FD] flex items-center justify-center p-2 cursor-pointer"
-          @click="toggleDropdown('mail')"
+          class="rounded-full bg-[#F6F9FD] flex items-center justify-center h-[42px] w-[42px] cursor-pointer"
+          @click.stop="toggleDropdown('mail')"
         >
-          <Icon name="lucide:mail" style="color: cadetblue" />
+          <Icon name="lucide:mail" style="color: #346cc4" />
         </div>
         <div
           v-if="openDropdown === 'mail'"
@@ -27,12 +49,12 @@
           <p class="text-gray-700 text-sm">No messages.</p>
         </div>
       </div>
-      <div class="relative">
+      <div class="relative navbar-dropdown">
         <div
-          class="rounded-full bg-[#F6F9FD] flex items-center justify-center p-2 cursor-pointer"
-          @click="toggleDropdown('notifications')"
+          class="rounded-full bg-[#F6F9FD] flex items-center justify-center h-[42px] w-[42px] cursor-pointer"
+          @click.stop="toggleDropdown('notifications')"
         >
-          <Icon name="lucide:bell" style="color: cadetblue" />
+          <Icon name="lucide:bell" style="color: #346cc4" />
         </div>
         <div
           v-if="openDropdown === 'notifications'"
@@ -41,29 +63,28 @@
           <p class="text-gray-700 text-sm">No notifications.</p>
         </div>
       </div>
-      <div class="relative">
+      <div class="relative navbar-dropdown">
         <div
-          class="rounded-full bg-[#F6F9FD] flex items-center justify-center p-2 cursor-pointer"
-          @click="toggleDropdown('profile')"
+          class="rounded-full bg-[#F6F9FD] flex items-center justify-center h-[42px] w-[42px] cursor-pointer"
+          @click.stop="toggleDropdown('profile')"
         >
-          <Icon name="lucide:user" style="color: cadetblue" />
+          <Icon name="lucide:user" style="color: #346cc4" />
         </div>
         <div
           v-if="openDropdown === 'profile'"
           class="absolute right-0 mt-2 bg-white border rounded shadow p-4 z-50 min-w-[180px]"
         >
-          <p class="text-gray-700 text-sm">{{ username }}</p>
+          <p class="text-gray-700 text-sm">Profile options here.</p>
         </div>
+      </div>
+      <div class="flex items-center justify-center">
+        <Icon
+          name="lucide:chevron-down"
+          size="18"
+          style="color: #346cc4"
+          class="-ml-2"
+        />
       </div>
     </div>
   </nav>
 </template>
-
-<script setup>
-import { ref } from "vue";
-import { username } from "~/data/data";
-const openDropdown = ref(null);
-function toggleDropdown(type) {
-  openDropdown.value = openDropdown.value === type ? null : type;
-}
-</script>
