@@ -82,3 +82,106 @@ export const statCards: StatCardData[] = [
     trendBg: "red-200",
   },
 ];
+
+export interface Booking {
+  orderId: string;
+  bookedFor: string;
+  bookingType: string;
+  debit: number;
+  credit: number;
+  total: number;
+  status: "Paid" | "Unpaid" | "Pending";
+}
+
+export const bookings: Booking[] = [
+  {
+    orderId: "EVT 11234124",
+    bookedFor: "Test",
+    bookingType: "Event",
+    debit: 1000,
+    credit: 1000,
+    total: 1000,
+    status: "Unpaid",
+  },
+  {
+    orderId: "EVT 11234125",
+    bookedFor: "Ali",
+    bookingType: "Flight",
+    debit: 2000,
+    credit: 0,
+    total: 2000,
+    status: "Paid",
+  },
+  {
+    orderId: "EVT 11234126",
+    bookedFor: "Sara",
+    bookingType: "Hotel",
+    debit: 0,
+    credit: 1500,
+    total: 1500,
+    status: "Pending",
+  },
+  {
+    orderId: "EVT 11234127",
+    bookedFor: "John",
+    bookingType: "Bus",
+    debit: 500,
+    credit: 0,
+    total: 500,
+    status: "Paid",
+  },
+  {
+    orderId: "EVT 11234128",
+    bookedFor: "Ayesha",
+    bookingType: "Car Rent",
+    debit: 0,
+    credit: 800,
+    total: 800,
+    status: "Unpaid",
+  },
+  {
+    orderId: "EVT 11234129",
+    bookedFor: "Bilal",
+    bookingType: "Train",
+    debit: 1200,
+    credit: 0,
+    total: 1200,
+    status: "Pending",
+  },
+  {
+    orderId: "EVT 11234130",
+    bookedFor: "Zara",
+    bookingType: "Event",
+    debit: 0,
+    credit: 900,
+    total: 900,
+    status: "Paid",
+  },
+  {
+    orderId: "EVT 11234131",
+    bookedFor: "Usman",
+    bookingType: "Hotel",
+    debit: 700,
+    credit: 0,
+    total: 700,
+    status: "Unpaid",
+  },
+  {
+    orderId: "EVT 11234132",
+    bookedFor: "Fatima",
+    bookingType: "Flight",
+    debit: 0,
+    credit: 1100,
+    total: 1100,
+    status: "Pending",
+  },
+  {
+    orderId: "EVT 11234133",
+    bookedFor: "Ahmed",
+    bookingType: "Bus",
+    debit: 600,
+    credit: 0,
+    total: 600,
+    status: "Paid",
+  },
+];

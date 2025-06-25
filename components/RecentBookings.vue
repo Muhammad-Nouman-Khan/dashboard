@@ -36,31 +36,39 @@
           <td
             class="px-4 py-2 border-r border-b border-gray-300 hidden md:table-cell"
           >
-            EVT 11234124
+            {{ booking.orderId }}
           </td>
           <td
             class="px-4 py-2 border-r border-b border-gray-300 hidden md:table-cell"
           >
-            Test
-          </td>
-          <td class="px-4 py-2 border-r border-b border-gray-300">Event</td>
-          <td
-            class="px-4 py-2 border-r border-b border-gray-300 hidden md:table-cell"
-          >
-            <span class="text-red-600">Rs 1,000</span>
-          </td>
-          <td
-            class="px-4 py-2 border-r border-b border-gray-300 hidden md:table-cell"
-          >
-            <span class="text-green-600">Rs 1,000</span>
+            {{ booking.bookedFor }}
           </td>
           <td class="px-4 py-2 border-r border-b border-gray-300">
-            <span class="text-gray-500">Rs 1,000</span>
+            {{ booking.bookingType }}
+          </td>
+          <td
+            class="px-4 py-2 border-r border-b border-gray-300 hidden md:table-cell"
+          >
+            <span class="text-red-600"
+              >Rs {{ booking.debit.toLocaleString() }}</span
+            >
+          </td>
+          <td
+            class="px-4 py-2 border-r border-b border-gray-300 hidden md:table-cell"
+          >
+            <span class="text-green-600"
+              >Rs {{ booking.credit.toLocaleString() }}</span
+            >
+          </td>
+          <td class="px-4 py-2 border-r border-b border-gray-300">
+            <span class="text-gray-500"
+              >Rs {{ booking.total.toLocaleString() }}</span
+            >
           </td>
           <td class="px-4 py-2 border-r border-b border-gray-300">
             <span
               :class="[
-                'px-2 py-1  rounded text-xs font-medium',
+                'px-2 py-1 rounded text-xs font-medium',
                 booking.status === 'Paid'
                   ? ' text-green-700 bg-green-200'
                   : booking.status === 'Unpaid'
@@ -83,16 +91,5 @@
 </template>
 
 <script setup>
-const bookings = [
-  { status: "Unpaid" },
-  { status: "Unpaid" },
-  { status: "Unpaid" },
-  { status: "Paid" },
-  { status: "Paid" },
-  { status: "Paid" },
-  { status: "Pending" },
-  { status: "Pending" },
-  { status: "Pending" },
-  { status: "Pending" },
-];
+import { bookings } from "~/data/data";
 </script>
