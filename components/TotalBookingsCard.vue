@@ -9,7 +9,7 @@
     >
       <!-- Title -->
       <div class="flex items-center gap-2 min-w-24">
-        <Icon :name="item.icon" size="16" class="text-orange-600" />
+        <Icon :name="item.icon" size="16" :style="{ color: item.iconColor }" />
         <p class="text-gray-500 text-sm">{{ item.title }}</p>
       </div>
       <!-- Progress -->
