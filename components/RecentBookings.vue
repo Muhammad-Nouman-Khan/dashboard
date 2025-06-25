@@ -1,0 +1,80 @@
+<template>
+  <div class="w-full shadow-lg mt-5">
+    <table class="w-full border-gray-400 text-sm text-left">
+      <thead class="bg-gray-100 text-gray-700">
+        <tr>
+          <th class="px-4 py-2 border-r rounded-tl-lg border-gray-300">
+            Sr. #
+          </th>
+          <th class="px-4 py-2 border-r border-gray-300">Order ID</th>
+          <th class="px-4 py-2 border-r border-gray-300">Booked For</th>
+          <th class="px-4 py-2 border-r border-gray-300">Booking Type</th>
+          <th class="px-4 py-2 border-r border-gray-300">Debit</th>
+          <th class="px-4 py-2 border-r border-gray-300">Credit</th>
+          <th class="px-4 py-2 border-r border-gray-300">Total</th>
+          <th class="px-4 py-2 border-r border-gray-300">Status</th>
+          <th class="px-4 py-2 border-gray-300 rounded-tr-lg">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          v-for="(booking, index) in bookings"
+          :key="index"
+          class="bg-white text-gray-500 font-medium"
+        >
+          <td class="px-4 py-2 border-r border-b border-gray-300">
+            {{ index + 1 }}
+          </td>
+          <td class="px-4 py-2 border-r border-b border-gray-300">
+            EVT 11234124
+          </td>
+          <td class="px-4 py-2 border-r border-b border-gray-300">Test</td>
+          <td class="px-4 py-2 border-r border-b border-gray-300">Event</td>
+          <td class="px-4 py-2 border-r border-b border-gray-300">
+            <span class="text-red-600">Rs 1,000</span>
+          </td>
+          <td class="px-4 py-2 border-r border-b border-gray-300">
+            <span class="text-green-600">Rs 1,000</span>
+          </td>
+          <td class="px-4 py-2 border-r border-b border-gray-300">
+            <span class="text-gray-500">Rs 1,000</span>
+          </td>
+          <td class="px-4 py-2 border-r border-b border-gray-300">
+            <span
+              :class="[
+                'px-2 py-1  rounded text-xs font-medium',
+                booking.status === 'Paid'
+                  ? ' text-green-700 bg-green-200'
+                  : booking.status === 'Unpaid'
+                  ? ' text-red-700 bg-red-200'
+                  : ' text-yellow-600 bg-yellow-200',
+              ]"
+            >
+              {{ booking.status }}
+            </span>
+          </td>
+          <td
+            class="px-4 py-2 border-b border-gray-300 text-center text-gray-500"
+          >
+            ⋮
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</template>
+
+<script setup>
+const bookings = [
+  { status: "Unpaid" },
+  { status: "Unpaid" },
+  { status: "Unpaid" },
+  { status: "Paid" },
+  { status: "Paid" },
+  { status: "Paid" },
+  { status: "Pending" },
+  { status: "Pending" },
+  { status: "Pending" },
+  { status: "Pending" },
+];
+</script>

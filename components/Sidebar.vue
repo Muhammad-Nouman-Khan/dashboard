@@ -54,16 +54,16 @@ watch(
   () => props.visible,
   (visible) => {
     if (visible) {
-      document.body.classList.add("overflow-hidden");
+      document?.body?.classList.add("overflow-hidden");
     } else {
-      document.body.classList.remove("overflow-hidden");
+      document?.body?.classList.remove("overflow-hidden");
     }
   },
   { immediate: true }
 );
 
 onUnmounted(() => {
-  document.body.classList.remove("overflow-hidden");
+  document?.body?.classList.remove("overflow-hidden");
 });
 </script>
 

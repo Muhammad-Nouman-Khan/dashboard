@@ -180,6 +180,11 @@
             </div>
           </div>
         </div>
+        <div class="p-6">
+          <h1 class="text-2xl font-bold">Recent Bookings</h1>
+          <!-- Container -->
+          <RecentBookings />
+        </div>
       </main>
     </div>
   </div>
@@ -190,3 +195,20 @@ import { ref } from "vue";
 import { chartData } from "~/data/data";
 const sidebarOpen = ref(false);
 </script>
+
+<!-- <div class="shadow-lg h-64 w-full rounded-lg mt-3 bg-white flex">
+  <div class="w-20 bg-gray-600"></div>
+  <div class="w-20 bg-red-600"></div>
+  <div class="w-20 bg-blue-600"></div>
+  <div class="w-20 bg-yellow-600"></div>
+  
+  <div class="w-20 bg-green-600"></div>
+  
+  <div class="w-20 bg-orange-600"></div>
+  
+  <div class="w-20 bg-black"></div>
+  
+  <div class="w-20 bg-brown-600"></div>
+  
+  <div class="w-20 bg-pink-600"></div>
+</div> -->
