@@ -14,88 +14,109 @@
               <p class="text-gray-500 mt-1">Monday, 20-August-2024</p>
             </div>
             <button
-              class="flex items-center gap-2 border border-blue-400 text-blue-600 px-4 py-2 rounded-lg bg-white hover:bg-blue-50 transition w-fit"
+              class="flex items-center gap-2 border border-blue-400 text-blue-600 px-4 py-2 rounded-lg bg-white cursor-pointer hover:bg-blue-50 transition w-fit"
             >
               <Icon name="lucide:calendar" />
               <span>This Week</span>
             </button>
           </div>
           <!-- Card Row -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="grid grid-cols-1 lg:grid-cols-3 lg:gap-2 gap-6">
+            <!-- Total Bookings -->
             <div
-              class="bg-white rounded-xl p-6 flex flex-col gap-2 shadow-sm border-l-5 border-blue-500"
+              class="bg-white flex justify-between rounded-lg border-l-5 border-l-blue-600 p-4"
             >
-              <span class="text-gray-500">Total Bookings</span>
-              <div class="flex items-center gap-2">
-                <span class="text-2xl font-bold">512</span>
-                <span class="text-sm text-red-500 flex items-center gap-1">
-                  <Icon name="lucide:arrow-down" size="16" />
-                  11.09%
-                </span>
-                <div
-                  class="ml-auto cursor-pointer hover:bg-blue-50 rounded-full p-2"
-                >
+              <div class="flex-1">
+                <p class="text-gray-500">Total Bookings</p>
+                <div class="flex gap-2 items-center">
+                  <h1 class="text-3xl lg:text-2xl font-bold">512</h1>
                   <div
-                    class="bg-blue-50 rounded-full p-4 flex items-center justify-center"
+                    class="flex items-center gap-1 bg-red-200 rounded-lg w-fit p-1"
                   >
                     <Icon
-                      name="lucide:calendar"
-                      class="text-blue-500"
-                      size="24"
+                      name="lucide:arrow-down"
+                      size="16"
+                      class="text-red-600"
                     />
+                    <span class="text-sm font-medium text-red-600 lg:text-xs"
+                      >11.09%</span
+                    >
                   </div>
+                </div>
+              </div>
+              <div class="flex items-center justify-center cursor-pointer">
+                <div
+                  class="bg-blue-100 rounded-full p-3 flex items-center justify-center"
+                >
+                  <Icon
+                    name="lucide:calendar"
+                    style="color: #007bff"
+                    size="24"
+                  />
                 </div>
               </div>
             </div>
             <!-- Total Savings -->
             <div
-              class="bg-white rounded-xl p-6 flex flex-col gap-2 shadow-sm border-l-5 border-blue-500"
+              class="bg-white flex justify-between rounded-lg border-l-5 border-l-blue-600 p-4"
             >
-              <span class="text-gray-500">Total Savings</span>
-              <div class="flex items-center gap-2">
-                <span class="text-2xl font-bold">45666</span>
-                <span class="text-sm text-green-600 flex items-center gap-1">
-                  <Icon name="lucide:arrow-up" size="16" />
-                  11.09%
-                </span>
-                <div
-                  class="ml-auto cursor-pointer hover:bg-blue-50 rounded-full p-2"
-                >
+              <div class="flex-1">
+                <p class="text-gray-500">Total Savings</p>
+                <div class="flex gap-2 items-center">
+                  <h1 class="text-3xl lg:text-2xl font-bold">45666</h1>
                   <div
-                    class="bg-blue-50 rounded-full p-4 flex items-center justify-center"
+                    class="flex items-center gap-1 bg-green-200 rounded-lg w-fit p-1"
                   >
                     <Icon
-                      name="lucide:calendar"
-                      class="text-blue-500"
-                      size="24"
+                      name="lucide:arrow-up"
+                      size="16"
+                      class="text-green-600"
                     />
+                    <span class="text-sm font-medium text-green-600 lg:text-xs"
+                      >11.09%</span
+                    >
                   </div>
+                </div>
+              </div>
+              <div class="flex items-center justify-center cursor-pointer">
+                <div
+                  class="bg-blue-100 rounded-full p-3 flex items-center justify-center"
+                >
+                  <Icon name="lucide:book" style="color: #007bff" size="24" />
                 </div>
               </div>
             </div>
             <!-- Total Expense -->
             <div
-              class="bg-white rounded-xl p-6 flex flex-col gap-2 shadow-sm border-l-5 border-blue-500"
+              class="bg-white flex justify-between rounded-lg border-l-5 border-l-blue-600 p-4"
             >
-              <span class="text-gray-500">Total Expense</span>
-              <div class="flex items-center gap-2">
-                <span class="text-2xl font-bold">512</span>
-                <span class="text-sm text-red-500 flex items-center gap-1">
-                  <Icon name="lucide:arrow-down" size="16" />
-                  11.09%
-                </span>
-                <div
-                  class="ml-auto cursor-pointer hover:bg-blue-50 rounded-full p-2"
-                >
+              <div class="flex-1">
+                <p class="text-gray-500">Total Expense</p>
+                <div class="flex gap-2 items-center">
+                  <h1 class="text-3xl lg:text-2xl font-bold">512</h1>
                   <div
-                    class="bg-blue-50 rounded-full p-4 flex items-center justify-center"
+                    class="flex items-center gap-1 bg-red-200 rounded-lg w-fit p-1"
                   >
                     <Icon
-                      name="lucide:calendar"
-                      class="text-blue-500"
-                      size="24"
+                      name="lucide:arrow-down"
+                      size="16"
+                      class="text-red-600"
                     />
+                    <span class="text-sm lg:text-xs font-medium text-red-600"
+                      >11.09%</span
+                    >
                   </div>
+                </div>
+              </div>
+              <div class="flex items-center justify-center cursor-pointer">
+                <div
+                  class="bg-blue-100 rounded-full p-3 flex items-center justify-center"
+                >
+                  <Icon
+                    name="lucide:calendar-check"
+                    style="color: #007bff"
+                    size="24"
+                  />
                 </div>
               </div>
             </div>

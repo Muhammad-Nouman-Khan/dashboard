@@ -1,5 +1,7 @@
 <template>
-  <nav class="w-full flex justify-between items-center p-4">
+  <nav
+    class="w-full flex justify-between items-center p-4 sticky top-0 z-50 bg-white shadow-md"
+  >
     <div class="flex items-center gap-4">
       <Icon
         name="lucide:menu"

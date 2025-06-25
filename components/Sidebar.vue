@@ -2,6 +2,7 @@
 import { useRoute } from "vue-router";
 import { navLinks, type NavItem } from "@/data/data";
 import { defineProps } from "vue";
+import { watch, onMounted, onUnmounted } from "vue";
 
 const props = defineProps({
   visible: {
@@ -48,14 +49,32 @@ const getRoute = (title: string): string => {
 const isActive = (item: NavItem): boolean => {
   return route.path === getRoute(item.title);
 };
+
+watch(
+  () => props.visible,
+  (visible) => {
+    if (visible) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  },
+  { immediate: true }
+);
+
+onUnmounted(() => {
+  document.body.classList.remove("overflow-hidden");
+});
 </script>
 
 <template>
   <div
     :class="[
-      'p-4 w-64 min-h-screen bg-white text-sm z-40 ',
-      props.visible ? 'block' : 'hidden',
-      'lg:block',
+      'p-4  bg-white text-sm z-40 transition-all duration-300 overflow-y-auto',
+      props.visible
+        ? 'fixed top-16 left-0 block h-[calc(100vh-4rem)]'
+        : 'hidden',
+      'lg:static lg:block lg:h-auto',
     ]"
   >
     <!-- Links container -->
