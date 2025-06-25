@@ -15,12 +15,8 @@
           </div>
         </div>
         <div class="flex flex-col gap-6 md:flex-row w-full mt-5">
-          <!-- <Chart class="flex-1" /> -->
-          <TotalBookingsCard
-            class="flex-1"
-            title="Total Bookings"
-            :chartData="chartData"
-          />
+          <Chart class="flex-1" />
+
           <TotalBookingsCard
             class="flex-1"
             title="Total Bookings"

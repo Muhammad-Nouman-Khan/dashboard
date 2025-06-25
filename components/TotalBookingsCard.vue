@@ -1,9 +1,11 @@
 <template>
-  <div class="border flex-1 border-gray-300 shadow-md rounded-lg bg-white p-5">
+  <div
+    class="border flex-1 border-[#E6E6E6] shadow-md rounded-lg bg-white pt-7 p-5"
+  >
     <h1 class="text-xl font-semibold text-[#15223C]">{{ title }}</h1>
     <!-- Stats -->
     <div
-      class="flex items-center gap-2 mt-3"
+      class="flex items-center gap-2 mt-6"
       v-for="item in chartData"
       :key="item.title"
     >
