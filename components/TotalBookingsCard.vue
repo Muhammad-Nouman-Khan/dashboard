@@ -15,7 +15,10 @@
       <!-- Progress -->
       <div class="flex-1">
         <div class="w-full h-2 bg-orange-200 rounded-full">
-          <div class="h-full w-[50%] bg-orange-600 rounded-full"></div>
+          <div
+            class="h-full bg-orange-600 rounded-full"
+            :style="{ width: (item.progress || 0) + '%' }"
+          ></div>
         </div>
       </div>
       <!-- Money -->

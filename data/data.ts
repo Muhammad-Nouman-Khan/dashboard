@@ -23,16 +23,17 @@ export interface ChartData {
   title: string;
   icon: string;
   money: number;
+  progress: number;
 }
 
 export const chartData: ChartData[] = [
-  { title: "Flights", icon: "lucide:plane", money: 4000 },
-  { title: "Bus", icon: "lucide:bus", money: 4000 },
-  { title: "Car Rent", icon: "lucide:car", money: 4000 },
-  { title: "Hotels", icon: "lucide:hotel", money: 4000 },
-  { title: "Train", icon: "lucide:train", money: 4000 },
-  { title: "Events", icon: "lucide:calendar", money: 4000 },
-  { title: "Tours", icon: "lucide:package", money: 4000 },
+  { title: "Flights", icon: "lucide:plane", money: 4000, progress: 50 },
+  { title: "Bus", icon: "lucide:bus", money: 4000, progress: 50 },
+  { title: "Car Rent", icon: "lucide:car", money: 4000, progress: 50 },
+  { title: "Hotels", icon: "lucide:hotel", money: 4000, progress: 50 },
+  { title: "Train", icon: "lucide:train", money: 4000, progress: 50 },
+  { title: "Events", icon: "lucide:calendar", money: 4000, progress: 50 },
+  { title: "Tours", icon: "lucide:package", money: 4000, progress: 50 },
 ];
 
 export interface StatCardData {
@@ -185,3 +186,5 @@ export const bookings: Booking[] = [
     status: "Paid",
   },
 ];
+
+export const username = "Shijra";

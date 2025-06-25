@@ -80,7 +80,7 @@
             </span>
           </td>
           <td
-            class="px-4 py-2 border-b border-gray-300 text-center text-gray-500"
+            class="px-4 py-2 border-b border-gray-300 text-center text-gray-500 cursor-pointer"
           >
             ⋮
           </td>
