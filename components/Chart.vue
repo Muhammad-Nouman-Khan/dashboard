@@ -17,6 +17,7 @@ import {
   PointElement,
   Filler,
 } from "chart.js";
+import { chartLineData } from "~/data/data";
 
 ChartJS.register(
   Title,
@@ -29,44 +30,7 @@ ChartJS.register(
   Filler
 );
 
-const chartData = {
-  labels: [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
-  ],
-  datasets: [
-    {
-      label: "",
-      data: [27, 46, 24, 26, 90, 70, 100, 170, 170, 100, 70, 100],
-      borderColor: "#00C2FF",
-      borderWidth: 1,
-      backgroundColor: "rgba(0, 194, 255, 0.2)",
-      fill: true,
-      tension: 0.4,
-      pointRadius: 0,
-    },
-    {
-      label: "",
-      data: [0, 5, 24, 55, 105, 125, 125, 150, 170, 200, 250, 252],
-      borderColor: "#346CC4",
-      borderWidth: 1,
-      backgroundColor: "rgba(52, 108, 196, 0.2)",
-      fill: true,
-      tension: 0.4,
-      pointRadius: 0,
-    },
-  ],
-};
+const chartData = chartLineData;
 const chartOptions = {
   maintainAspectRatio: false,
   scales: {
