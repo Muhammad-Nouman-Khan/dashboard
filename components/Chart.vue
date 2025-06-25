@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="p-4 rounded-xl bg-white shadow w-full max-w-[450px] lg:max-w-[500px] md:w-full mx-auto"
-  >
+  <div class="p-4 rounded-xl bg-white shadow w-full">
     <Line :data="chartData" :options="chartOptions" class="w-full" />
   </div>
 </template>

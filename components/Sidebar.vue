@@ -52,7 +52,7 @@ const isActive = (item: NavItem): boolean => {
 
 function handleBodyScroll(visible: boolean) {
   // Only disable scroll on md and below
-  if (window.innerWidth < 1024) {
+  if (window?.innerWidth < 1024) {
     if (visible) {
       document?.body?.classList.add("overflow-hidden");
     } else {
