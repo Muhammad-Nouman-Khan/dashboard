@@ -21,7 +21,11 @@
           </th>
           <th class="px-4 py-2 border-r border-gray-300">Total</th>
           <th class="px-4 py-2 border-r border-gray-300">Status</th>
-          <th class="px-4 py-2 border-gray-300 rounded-tr-lg">Action</th>
+          <th
+            class="px-4 py-2 border-gray-300 rounded-tr-lg hidden sm:table-cell"
+          >
+            Action
+          </th>
         </tr>
       </thead>
       <tbody>
@@ -80,7 +84,7 @@
             </span>
           </td>
           <td
-            class="px-4 py-2 border-b border-gray-300 text-center text-gray-500 cursor-pointer"
+            class="px-4 py-2 border-b border-gray-300 text-center text-gray-500 hidden sm:table-cell"
           >
             ⋮
           </td>

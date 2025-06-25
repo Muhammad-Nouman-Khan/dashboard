@@ -50,20 +50,35 @@ const isActive = (item: NavItem): boolean => {
   return route.path === getRoute(item.title);
 };
 
-watch(
-  () => props.visible,
-  (visible) => {
+function handleBodyScroll(visible: boolean) {
+  // Only disable scroll on md and below
+  if (window.innerWidth < 1024) {
     if (visible) {
       document?.body?.classList.add("overflow-hidden");
     } else {
       document?.body?.classList.remove("overflow-hidden");
     }
+  } else {
+    document?.body?.classList.remove("overflow-hidden");
+  }
+}
+
+watch(
+  () => props.visible,
+  (visible) => {
+    handleBodyScroll(visible);
   },
   { immediate: true }
 );
 
-onUnmounted(() => {
-  document?.body?.classList.remove("overflow-hidden");
+// Also update on resize
+onMounted(() => {
+  const resizeHandler = () => handleBodyScroll(props.visible);
+  window.addEventListener("resize", resizeHandler);
+  onUnmounted(() => {
+    window.removeEventListener("resize", resizeHandler);
+    document?.body?.classList.remove("overflow-hidden");
+  });
 });
 </script>
 
