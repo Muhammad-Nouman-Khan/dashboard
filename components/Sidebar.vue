@@ -70,7 +70,7 @@ onUnmounted(() => {
 <template>
   <div
     :class="[
-      'p-4  bg-white text-sm z-40 transition-all duration-300 overflow-y-auto',
+      'p-4 min-h-screen bg-white text-sm z-40 transition-all duration-300 overflow-y-auto',
       props.visible
         ? 'fixed top-16 left-0 block h-[calc(100vh-4rem)]'
         : 'hidden',

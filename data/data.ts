@@ -34,3 +34,51 @@ export const chartData: ChartData[] = [
   { title: "Events", icon: "lucide:calendar", money: 4000 },
   { title: "Tours", icon: "lucide:package", money: 4000 },
 ];
+
+export interface StatCardData {
+  title: string;
+  value: number | string;
+  icon: string;
+  iconColor: string;
+  borderColor: string;
+  trend: string;
+  trendIcon: string;
+  trendColor: string;
+  trendBg: string;
+}
+
+export const statCards: StatCardData[] = [
+  {
+    title: "Total Bookings",
+    value: 512,
+    icon: "lucide:calendar",
+    iconColor: "#007bff",
+    borderColor: "blue-600",
+    trend: "11.09%",
+    trendIcon: "lucide:arrow-down",
+    trendColor: "text-red-600",
+    trendBg: "red-200",
+  },
+  {
+    title: "Total Savings",
+    value: 45666,
+    icon: "lucide:book",
+    iconColor: "#007bff",
+    borderColor: "blue-600",
+    trend: "11.09%",
+    trendIcon: "lucide:arrow-up",
+    trendColor: "text-green-600",
+    trendBg: "green-200",
+  },
+  {
+    title: "Total Expense",
+    value: 512,
+    icon: "lucide:calendar-check",
+    iconColor: "#007bff",
+    borderColor: "blue-600",
+    trend: "11.09%",
+    trendIcon: "lucide:arrow-down",
+    trendColor: "text-red-600",
+    trendBg: "red-200",
+  },
+];

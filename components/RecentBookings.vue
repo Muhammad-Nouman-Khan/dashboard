@@ -6,11 +6,19 @@
           <th class="px-4 py-2 border-r rounded-tl-lg border-gray-300">
             Sr. #
           </th>
-          <th class="px-4 py-2 border-r border-gray-300">Order ID</th>
-          <th class="px-4 py-2 border-r border-gray-300">Booked For</th>
+          <th class="px-4 py-2 border-r border-gray-300 hidden md:table-cell">
+            Order ID
+          </th>
+          <th class="px-4 py-2 border-r border-gray-300 hidden md:table-cell">
+            Booked For
+          </th>
           <th class="px-4 py-2 border-r border-gray-300">Booking Type</th>
-          <th class="px-4 py-2 border-r border-gray-300">Debit</th>
-          <th class="px-4 py-2 border-r border-gray-300">Credit</th>
+          <th class="px-4 py-2 border-r border-gray-300 hidden md:table-cell">
+            Debit
+          </th>
+          <th class="px-4 py-2 border-r border-gray-300 hidden md:table-cell">
+            Credit
+          </th>
           <th class="px-4 py-2 border-r border-gray-300">Total</th>
           <th class="px-4 py-2 border-r border-gray-300">Status</th>
           <th class="px-4 py-2 border-gray-300 rounded-tr-lg">Action</th>
@@ -25,15 +33,25 @@
           <td class="px-4 py-2 border-r border-b border-gray-300">
             {{ index + 1 }}
           </td>
-          <td class="px-4 py-2 border-r border-b border-gray-300">
+          <td
+            class="px-4 py-2 border-r border-b border-gray-300 hidden md:table-cell"
+          >
             EVT 11234124
           </td>
-          <td class="px-4 py-2 border-r border-b border-gray-300">Test</td>
+          <td
+            class="px-4 py-2 border-r border-b border-gray-300 hidden md:table-cell"
+          >
+            Test
+          </td>
           <td class="px-4 py-2 border-r border-b border-gray-300">Event</td>
-          <td class="px-4 py-2 border-r border-b border-gray-300">
+          <td
+            class="px-4 py-2 border-r border-b border-gray-300 hidden md:table-cell"
+          >
             <span class="text-red-600">Rs 1,000</span>
           </td>
-          <td class="px-4 py-2 border-r border-b border-gray-300">
+          <td
+            class="px-4 py-2 border-r border-b border-gray-300 hidden md:table-cell"
+          >
             <span class="text-green-600">Rs 1,000</span>
           </td>
           <td class="px-4 py-2 border-r border-b border-gray-300">
