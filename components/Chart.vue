@@ -24,7 +24,21 @@
       </div>
     </div>
     <div class="w-full" style="height: 320px">
-      <Line :data="chartData" :options="chartOptions" class="w-full h-full" />
+      <Line
+        v-if="data"
+        :data="data"
+        :options="chartOptions"
+        class="w-full h-full"
+      />
+      <div v-else-if="pending" class="flex items-center justify-center h-full">
+        Loading...
+      </div>
+      <div
+        v-else-if="error"
+        class="flex items-center justify-center h-full text-red-500"
+      >
+        Error loading chart data
+      </div>
     </div>
   </div>
 </template>
@@ -42,7 +56,7 @@ import {
   PointElement,
   Filler,
 } from "chart.js";
-import { chartLineData } from "~/data/data";
+import { useFetch } from "#app";
 
 ChartJS.register(
   Title,
@@ -55,7 +69,8 @@ ChartJS.register(
   Filler
 );
 
-const chartData = chartLineData;
+const { data, pending, error } = useFetch("/api/chartLineData");
+
 const chartOptions = {
   maintainAspectRatio: false,
   responsive: true,
