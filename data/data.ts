@@ -18,3 +18,19 @@ export const navLinks: NavItem[] = [
   { icon: "lucide:shield-check", title: "Privacy Policy" },
   { icon: "lucide:file-text", title: "Terms and Conditions" },
 ];
+
+export interface ChartData {
+  title: string;
+  icon: string;
+  money: number;
+}
+
+export const chartData: ChartData[] = [
+  { title: "Flights", icon: "lucide:plane", money: 4000 },
+  { title: "Bus", icon: "lucide:bus", money: 4000 },
+  { title: "Car Rent", icon: "lucide:car", money: 4000 },
+  { title: "Hotels", icon: "lucide:hotel", money: 4000 },
+  { title: "Train", icon: "lucide:train", money: 4000 },
+  { title: "Events", icon: "lucide:calendar", money: 4000 },
+  { title: "Tours", icon: "lucide:package", money: 4000 },
+];
