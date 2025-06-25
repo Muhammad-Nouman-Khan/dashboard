@@ -9,7 +9,7 @@
         class="cursor-pointer"
         @click="$emit('toggleSidebar')"
       />
-      <h1 class="italic text-2xl font-bold">Bookme</h1>
+      <h1 class="italic text-2xl font-bold">bookme</h1>
     </div>
 
     <div class="flex items-center gap-4">
