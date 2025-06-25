@@ -123,7 +123,7 @@ onMounted(() => {
     <!-- Logout -->
 
     <NuxtLink
-      to="/logout"
+      to="/"
       class="flex items-center gap-2 text-red-600 hover:bg-red-100 rounded-lg p-2 mt-4"
     >
       <Icon name="lucide:log-out" size="20" />
