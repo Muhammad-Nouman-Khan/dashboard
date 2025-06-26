@@ -6,7 +6,7 @@
     <!-- Stats -->
     <div
       class="flex items-center gap-2 mt-6"
-      v-for="item in chartData"
+      v-for="item in totalBookings"
       :key="item.title"
     >
       <!-- Title -->
@@ -34,6 +34,6 @@
 <script setup>
 const props = defineProps({
   title: String,
-  chartData: Array,
+  totalBookings: Array,
 });
 </script>

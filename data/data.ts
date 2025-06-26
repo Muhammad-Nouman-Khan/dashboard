@@ -19,7 +19,7 @@ export const navLinks: NavItem[] = [
   { icon: "lucide:file-text", title: "Terms and Conditions" },
 ];
 
-export interface ChartData {
+export interface totalBookingsData {
   title: string;
   icon: string;
   iconColor: string;
@@ -27,7 +27,7 @@ export interface ChartData {
   progress: number;
 }
 
-export const chartData: ChartData[] = [
+export const totalBookings: totalBookingsData[] = [
   {
     title: "Flights",
     icon: "lucide:plane",

@@ -31,7 +31,7 @@
           <TotalBookingsCard
             class="flex-1"
             title="Total Bookings"
-            :chartData="chartData"
+            :totalBookings="totalBookings"
           />
         </div>
         <div class="mt-5">
@@ -45,7 +45,7 @@
 </template>
 
 <script setup>
-import { chartData } from "~/data/data";
+import { totalBookings } from "~/data/data";
 import Chart from "~/components/Chart.vue";
 import StatCard from "~/components/StatCard.vue";
 import TotalBookingsCard from "~/components/TotalBookingsCard.vue";
