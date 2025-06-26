@@ -19,7 +19,7 @@
       </button>
       <div
         v-if="showDropdown"
-        class="absolute right-0 mt-2 bg-white border rounded shadow p-4 z-10 min-w-[180px]"
+        class="absolute left-0 lg:-left-12 mt-2 bg-white border rounded shadow p-4 z-10 min-w-[180px]"
       >
         <p class="text-[#3C3C3C] text-sm">
           Showing stats for <span class="font-semibold">this week</span>.
