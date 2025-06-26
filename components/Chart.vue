@@ -54,7 +54,6 @@ import {
   PointElement,
   Filler,
 } from "chart.js";
-import { useFetch } from "#app";
 
 ChartJS.register(
   Title,
