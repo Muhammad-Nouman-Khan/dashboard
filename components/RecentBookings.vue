@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full shadow-lg mt-5">
+  <div class="w-full shadow-md mt-5">
     <table class="w-full border-gray-400 text-sm text-left">
       <thead class="bg-[#E6E6E66B] text-[#3C3C3C]">
         <tr>
