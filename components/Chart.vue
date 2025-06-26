@@ -1,6 +1,6 @@
 <template>
   <div
-    class="rounded-xl bg-white shadow w-[94vw] md:w-[450px] border border-[#E6E6E6] p-4"
+    class="rounded-xl bg-white shadow-md w-[94vw] md:w-[450px] border border-[#E6E6E6] p-4"
   >
     <div class="flex justify-between mb-5">
       <div>
