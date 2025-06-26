@@ -98,7 +98,7 @@ export const statCards: StatCardData[] = [
     iconColor: "#346CC4",
     trend: "11.09%",
     trendIcon: "lucide:arrow-down",
-    trendColor: "text-red-600",
+    trendColor: "text-[#F34141]",
     trendBg: "bg-[#FFFBFB]",
   },
   {
