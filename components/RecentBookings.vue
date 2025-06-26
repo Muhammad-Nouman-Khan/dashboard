@@ -10,7 +10,7 @@
           <th :class="headerCellClass + ' hidden md:table-cell'">Debit</th>
           <th :class="headerCellClass + ' hidden md:table-cell'">Credit</th>
           <th :class="headerCellClass">Total</th>
-          <th :class="headerCellClass">Status</th>
+          <th :class="'rounded-tr-lg '">Status</th>
           <th :class="headerCellClass + ' rounded-tr-lg hidden sm:table-cell'">
             Action
           </th>
