@@ -4,7 +4,7 @@
     <div class="flex flex-1">
       <Sidebar :visible="sidebarOpen" />
       <main
-        class="flex-1 bg-[#F6F9FD] mt-[70px] p-[7.5px] pb-7 md:p-6 transition-all duration-300"
+        class="flex-1 bg-[#F6F9FD] mt-[70px] p-[7.5px] pb-6 md:p-6 transition-all duration-300"
         :class="sidebarOpen ? 'lg:ml-[289px]' : 'lg:ml-0'"
       >
         <slot />
