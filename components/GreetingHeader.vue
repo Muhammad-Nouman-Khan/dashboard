@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-6"
+    class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-6 pt-2"
   >
     <div>
       <h2 class="text-3xl font-bold text-[#3C3C3C]">
