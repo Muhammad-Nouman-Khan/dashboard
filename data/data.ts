@@ -263,6 +263,7 @@ export const chartLineData: ChartLineData = {
       data: [27, 46, 24, 26, 90, 70, 100, 170, 170, 100, 70, 100],
       borderColor: "#00C2FF",
       borderWidth: 1,
+      // #346CC4
       backgroundColor: "rgba(0, 194, 255, 0.2)",
       fill: true,
       tension: 0.4,
@@ -273,6 +274,7 @@ export const chartLineData: ChartLineData = {
       data: [0, 5, 24, 55, 105, 125, 125, 150, 170, 200, 250, 252],
       borderColor: "#346CC4",
       borderWidth: 1,
+      // #57C3FF
       backgroundColor: "rgba(52, 108, 196, 0.2)",
       fill: true,
       tension: 0.4,

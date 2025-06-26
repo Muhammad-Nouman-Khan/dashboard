@@ -16,9 +16,9 @@
       </div>
       <!-- Progress -->
       <div class="flex-1">
-        <div class="w-full h-2 bg-orange-200 rounded-full">
+        <div class="w-full h-2 bg-orange-100 rounded-full">
           <div
-            class="h-full bg-orange-600 rounded-full"
+            class="h-full bg-gradient-to-r from-[#F79042] to-[#FCAE73] rounded-full"
             :style="{ width: (item.progress || 0) + '%' }"
           ></div>
         </div>
