@@ -45,11 +45,11 @@
 </template>
 
 <script setup>
-import { totalBookings } from "~/data/data";
 import Chart from "~/components/Chart.vue";
 import StatCard from "~/components/StatCard.vue";
 import TotalBookingsCard from "~/components/TotalBookingsCard.vue";
 import GreetingHeader from "~/components/GreetingHeader.vue";
 import { username } from "~/data/data";
 const { data: statCards, pending, error } = await useFetch("/api/stats");
+const { data: totalBookings } = await useFetch("/api/totalBookings");
 </script>
