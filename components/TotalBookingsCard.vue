@@ -1,6 +1,6 @@
 <template>
   <div
-    class="border flex-1 border-[#E6E6E6] shadow-md rounded-lg bg-white pt-7 p-5"
+    class="border flex-1 border-[#E6E6E6] shadow-md rounded-lg bg-white pt-10 p-5"
   >
     <h1 class="text-xl font-semibold text-[#15223C]">{{ title }}</h1>
     <!-- Stats -->
