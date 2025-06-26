@@ -44,9 +44,9 @@ onBeforeUnmount(() => {
         </div>
         <div
           v-if="openDropdown === 'mail'"
-          class="absolute right-0 mt-2 bg-white border rounded shadow p-4 z-50 min-w-[180px]"
+          class="absolute right-0 mt-2 bg-white border-2 border-[#E6E6E6] rounded shadow p-4 z-50 min-w-[180px]"
         >
-          <p class="text-gray-700 text-sm">No messages.</p>
+          <p class="text-[#3C3C3C] text-sm">No messages.</p>
         </div>
       </div>
       <div class="relative navbar-dropdown">
@@ -58,9 +58,9 @@ onBeforeUnmount(() => {
         </div>
         <div
           v-if="openDropdown === 'notifications'"
-          class="absolute right-0 mt-2 bg-white border rounded shadow p-4 z-50 min-w-[180px]"
+          class="absolute right-0 mt-2 bg-white border-2 border-[#E6E6E6] rounded shadow p-4 z-50 min-w-[180px]"
         >
-          <p class="text-gray-700 text-sm">No notifications.</p>
+          <p class="text-[#3C3C3C] text-sm">No notifications.</p>
         </div>
       </div>
       <div class="relative navbar-dropdown">
@@ -72,9 +72,9 @@ onBeforeUnmount(() => {
         </div>
         <div
           v-if="openDropdown === 'profile'"
-          class="absolute right-0 mt-2 bg-white border rounded shadow p-4 z-50 min-w-[180px]"
+          class="absolute right-0 mt-2 bg-white border-2 border-[#E6E6E6] rounded shadow p-4 z-50 min-w-[180px]"
         >
-          <p class="text-gray-700 text-sm">Profile options here.</p>
+          <p class="text-[#3C3C3C] text-sm">Profile options here.</p>
         </div>
       </div>
       <div class="flex items-center justify-center">
