@@ -8,4 +8,8 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  devServer: {
+    host: process.env.NUXT_HOST || "0.0.0.0",
+    port: Number(process.env.NUXT_PORT) || 3000,
+  },
 });
